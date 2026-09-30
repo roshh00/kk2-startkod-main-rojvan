@@ -11,22 +11,18 @@ while (true)
     Console.WriteLine("3. Spara");
     Console.WriteLine("4. Sök vara");
     Console.WriteLine("5. Avsluta");
-    Console.Write("Välj: ");
-
-    int choice = int.Parse(Console.ReadLine());
+    int choice = ReadInt("Välj: ");
 
     if (choice == 1)
     {
         Console.Write("Namn: ");
         string name = Console.ReadLine();
-        Console.Write("Pris: ");
-        int price = int.Parse(Console.ReadLine());
+        int price = ReadInt("Pris: ");
         list.Add(new Item(name, price));
     }
     else if (choice == 2)
     {
-        Console.Write("Nummer: ");
-        int number = int.Parse(Console.ReadLine());
+        int number = ReadInt("Nummer: ");
         list.RemoveAt(number);
     }
     else if (choice == 3)
@@ -51,5 +47,19 @@ while (true)
     else if (choice == 5)
     {
         break;
+    }
+}
+
+int ReadInt(string prompt)
+{
+    while (true)
+    {
+        Console.Write(prompt);
+        if (int.TryParse(Console.ReadLine(), out int value))
+        {
+            return value;
+        }
+
+        Console.WriteLine("Ogiltig inmatning. Ange ett heltal.");
     }
 }

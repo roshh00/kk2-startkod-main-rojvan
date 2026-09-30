@@ -71,8 +71,9 @@ class ShoppingList
         {
             File.WriteAllText(path, string.Join("\r\n", lines) + "\r\n");
         }
-        catch
+        catch (FileNotFoundException)
         {
+            Console.WriteLine("Fel: Filen kunde inte hittas.");
         }
 
         Console.WriteLine("Listan är sparad.");

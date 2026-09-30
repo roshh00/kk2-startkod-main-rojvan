@@ -1,3 +1,4 @@
 15;Mjölk
 30;Bröd
 50;Ost
+20;Kyckling

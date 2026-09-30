@@ -23,3 +23,11 @@ Vilket gjorde så den hoppade över första raden.
 Ändrar koden till for int (0) istället för den kan börja räkna från första raden. 
 
 Nu när koden körs så visar den rätt total summa. 
+
+Provade med att lägga till en ny vara
+Den la till varan i txt filen och kan köras som vanligt.
+
+
+La till catch på ShoppingList på rad 74 med FileNotFoundExecption. 
+Programmet crashade när jag skrev in ett ogiltigt tecken. Ändrade i program.cs filen
+Jag la till tryParse vid inmatning av ogiltigt tecken och nu får man upp felmeddelanden. 
