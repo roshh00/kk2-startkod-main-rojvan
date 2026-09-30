@@ -15,4 +15,11 @@ Men nu visar den bara Ost och hur mycket den kostar.
 Frågade Chatbotten i Vs Code och den gav mig att jag skulle ersätta två rader i ShoppingList
 Ändrade till String Lines = File.ReadAllLines(path); istället för string text (ReadAllText);
 
-Nu visar koden beskrivingen på alla tre varor med text och pris. 
+Koden visar beskrivingen på alla tre varor med text och pris. 
+nu visar total summan fel pris. 
+
+Jag ser att i ShoppingList på rad 28 så är den står for int (1) då den börjar räkna från index 1. 
+Vilket gjorde så den hoppade över första raden. 
+Ändrar koden till for int (0) istället för den kan börja räkna från första raden. 
+
+Nu när koden körs så visar den rätt total summa. 
