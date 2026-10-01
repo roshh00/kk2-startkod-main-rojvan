@@ -70,18 +70,27 @@ class ShoppingList
         try
         {
             File.WriteAllText(path, string.Join("\r\n", lines) + "\r\n");
+            Console.WriteLine("Listan är sparad.");
         }
-        catch (FileNotFoundException)
+        catch (IOException)
         {
-            Console.WriteLine("Fel: Filen kunde inte hittas.");
+            Console.WriteLine("Fel: Listan kunde inte sparas.");
         }
-
-        Console.WriteLine("Listan är sparad.");
+        catch (UnauthorizedAccessException)
+        {
+            Console.WriteLine("Fel: Listan kunde inte sparas.");
+        }
     }
 
     // Reads the file back into the list.
     public void Load()
     {
+        // Sparar listan utan items.txt.
+        if (!File.Exists(path))
+        {
+            return;
+        }
+
         string[] lines = File.ReadAllLines(path);
 
         foreach (string line in lines)

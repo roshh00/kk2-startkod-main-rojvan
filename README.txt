@@ -31,3 +31,12 @@ Den la till varan i txt filen och kan köras som vanligt.
 La till catch på ShoppingList på rad 74 med FileNotFoundExecption. 
 Programmet crashade när jag skrev in ett ogiltigt tecken. Ändrade i program.cs filen
 Jag la till tryParse vid inmatning av ogiltigt tecken och nu får man upp felmeddelanden. 
+
+
+Provade att starta programmet utan items.txt men den kraschade. 
+La till på ShoppingList på rad 86 att programmet kan köras utan items.txt fil
+Men den skapar en ny items.txt fil när jag väljer att spara mina varor på menyn. 
+
+
+Jag la till på ShoppingList på rad 73 att listan blir bara sparad om man skriver in rätt
+Om ett fel inträffar så visar den ett felmeddelande på att listan kunde inte sparas. 
