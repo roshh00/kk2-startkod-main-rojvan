@@ -15,8 +15,7 @@ while (true)
 
     if (choice == 1)
     {
-        Console.Write("Namn: ");
-        string name = Console.ReadLine();
+        string name = ReadName("Namn: ");
         int price = ReadInt("Pris: ");
         list.Add(new Item(name, price));
     }
@@ -61,5 +60,25 @@ int ReadInt(string prompt)
         }
 
         Console.WriteLine("Ogiltig inmatning. Ange ett heltal.");
+    }
+}
+
+string ReadName(string prompt)
+{
+    while (true)
+    {
+        Console.Write(prompt);
+        string name = Console.ReadLine();
+        
+// kastar in ett undantag om namnet är ogiltigt, vilket fångas i catch-blocket
+        try
+        {
+            Item.ValidateName(name);
+            return name;
+        }
+        catch (ArgumentException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
     }
 }

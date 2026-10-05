@@ -98,7 +98,9 @@ class ShoppingList
             string[] parts = line.Split(';');
         if (parts.Length < 2) 
         continue; 
+
         // La till parts.Length < 2 för att undvika fel om det finns tomma rader i filen
+        
         
             items.Add(new Item(parts[1], int.Parse(parts[0])));
         }

@@ -40,3 +40,11 @@ Men den skapar en ny items.txt fil när jag väljer att spara mina varor på men
 
 Jag la till på ShoppingList på rad 73 att listan blir bara sparad om man skriver in rätt
 Om ett fel inträffar så visar den ett felmeddelande på att listan kunde inte sparas. 
+
+
+
+
+Nu när alla sex fel är lösta ska jag påbörja andra delen. 
+
+Började med att kasta in argument execption med ett felmeddelande i items.cs på rad 14
+När man skrev in en tom rad / bara mellanslag 

@@ -6,8 +6,17 @@ class Item
 
     public Item(string name, int price)
     {
+        ValidateName(name);
         Name = name;
         Price = price;
+    }
+
+    internal static void ValidateName(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Varans namn får inte vara tomt.");
+        }
     }
 
     public override string ToString()
