@@ -51,3 +51,9 @@ När man skrev in en tom rad / bara mellanslag.
 
 Har lagt till ArgumentOutOfRangeExecption i både items.cs och program.cs
 När man skriver in ett negativt värde så får vi upp ett felmeddelande
+
+När jag har lagt till ett budgettak så valde jag att lägga till i ShoppingList.cs och i Program.cs
+Jag började med i ShoppingList att lägga till en readonly int (budget) i public stringen
+Därefter i public void kan dem integrera med varandra om priset överstiger budgettaket. 
+
+I Program.cs la jag til en ytterligare catch för att förhindra programmet till att krascha. 

@@ -4,13 +4,30 @@ class ShoppingList
     private List<Item> items = new List<Item>();
     private string path;
 
-    public ShoppingList(string path)
+// lägger till en budgettak 
+    private readonly int budget;
+    public ShoppingList(string path, int budget)
     {
+        if (budget < 0)
+        { 
+            throw new ArgumentOutOfRangeException(nameof(budget));
+        }
+
         this.path = path;
+        this.budget = budget;
     }
+
 
     public void Add(Item item)
     {
+        if (item == null)
+        {
+            throw new ArgumentNullException(nameof(item));
+        }
+        if (item.Price > budget - Total())
+        {
+            throw new InvalidOperationException("Varans pris överstiger budgeten.");
+        }
         items.Add(item);
     }
 

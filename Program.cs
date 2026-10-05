@@ -1,4 +1,4 @@
-ShoppingList list = new ShoppingList("items.txt");
+ShoppingList list = new ShoppingList("items.txt", 500);
 list.Load();
 
 while (true)
@@ -32,6 +32,12 @@ while (true)
             {
                 Console.WriteLine("Varans pris får inte vara negativt.");
             }
+            catch (InvalidOperationException exception)
+            {
+                Console.WriteLine(exception.Message);
+                break;
+            }
+            // har lagt till en till catch för att den ska inte krascha när man överskrider budgeten.
         }
     }
     else if (choice == 2)
