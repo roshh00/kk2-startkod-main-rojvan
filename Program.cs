@@ -16,8 +16,23 @@ while (true)
     if (choice == 1)
     {
         string name = ReadName("Namn: ");
-        int price = ReadInt("Pris: ");
-        list.Add(new Item(name, price));
+        
+// loopar tills användaren anger ett giltigt pris 
+// och fångar ArgumentOutOfRangeException om priset är negativt. 
+
+        while (true)
+        {
+            int price = ReadInt("Pris:");
+            try
+            {
+                list.Add(new Item(name, price));
+                break;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Varans pris får inte vara negativt.");
+            }
+        }
     }
     else if (choice == 2)
     {

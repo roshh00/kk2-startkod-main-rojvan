@@ -44,7 +44,10 @@ Om ett fel inträffar så visar den ett felmeddelande på att listan kunde inte 
 
 
 
-Nu när alla sex fel är lösta ska jag påbörja andra delen. 
+2. Nu när alla sex fel är lösta ska jag påbörja andra delen. 
 
 Började med att kasta in argument execption med ett felmeddelande i items.cs på rad 14
-När man skrev in en tom rad / bara mellanslag 
+När man skrev in en tom rad / bara mellanslag. 
+
+Har lagt till ArgumentOutOfRangeExecption i både items.cs och program.cs
+När man skriver in ett negativt värde så får vi upp ett felmeddelande
