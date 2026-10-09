@@ -57,3 +57,7 @@ Jag började med i ShoppingList att lägga till en readonly int (budget) i publi
 Därefter i public void kan dem integrera med varandra om priset överstiger budgettaket. 
 
 I Program.cs la jag til en ytterligare catch för att förhindra programmet till att krascha. 
+
+
+
+Klassdiagram länk: https://mermaid.ai/app/projects/ad7c1891-c192-4702-9056-566f9173add5/diagrams/fe57b138-43b6-49d7-8103-fc1d804f31a1/version/v0.1/edit
